@@ -1,1 +1,26 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root{
+  --main-font-family: Inter-Variable, sans-serif;
+  --main-font-size: 18px;
+  --button-font-size: 14px;
+  --lable-font-size: 14px;
+  --button-line-height: 90%;
+  --dialog-line-height:150%;
+  --dialog-font-size:14px;
+  --additional-font-family: PressStart2P-Regular, sans-serif;
+  --main-font-weight: 410;
+  --title-font-weight: 715;
+  --header-title-font-size:clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --header__description-font-size:clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --header__padding: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem);
+  --header__margin: 100px;
+  --bg-image: repeating-linear-gradient(to right, #d3d3d3 0px 2px , transparent 2px 4px ),
+   repeating-linear-gradient(to bottom, #d3d3d3 0px 2px , transparent 2px 4px ),
+   linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  --bg-color: #fff;
+  --text-stroke-color: #fff;
+  --border-setting: 2px solid #000;
+  --accent-color: black;
+  --card-gap: 50px;
+  --adaptive-gap: 25px;
+}
