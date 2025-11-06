@@ -31,11 +31,14 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin: var(--header__margin) 0;
-  padding: var(--header__padding) 0;
+  margin: var(--header-margin) 0;
+  padding: var(--header-padding) 0;
   font-family: var(--additional-font-family);
   text-transform: uppercase;
   background-color: var(--bg-color);
+}
+.main {
+  display: grid;
 }
 
 .accent {
@@ -45,7 +48,7 @@
   font-size: var(--header-title-font-size);
 }
 .header__description {
-  font-size: var(--header__description-font-size);
+  font-size: var(--header-description-font-size);
 }
 
 .main__list {
@@ -81,6 +84,7 @@
   display: block;
   border: var(--border-setting);
   object-fit: cover;
+  object-position: center; /*исправленно*/
   block-size: 100%;
   inline-size: 100%;
   aspect-ratio: 1 / 1;
@@ -115,37 +119,34 @@
   opacity: 0.5;
   font-family: var(--additional-font-family);
   font-size: var(--lable-font-size);
+  text-shadow: 1px var(--text-stroke-color);
   mix-blend-mode: hard-light;
-  -webkit-text-stroke: 1px var(--text-stroke-color);
 }
 
 .carg__image-container {
   position: relative;
 }
 
-@supports (text-stroke: 1px var(--text-stroke-color)) {
-  span {
-    text-stroke: 1px var(--text-stroke-color);
+@supports (-webkit-text-stroke: 1px var(--text-stroke-color)) {
+  .card__lable-text {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
   }
 }
-.footer {
-  margin: 0 auto;
+.section {
+  justify-self: center;
   margin-block-start: 50px;
   margin-block-end: 100px;
 }
-.footer__button {
+.section__button {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
   padding: 12px 18px;
-  font-family: var(--additional-font-family);
-  font-size: var(--button-font-size);
-  line-height: var(--button-line-height);
-  background-color: var(--bg-color);
 }
 
-.footer__image {
+.section__image {
   color: white;
   mix-blend-mode: difference;
   inline-size: 21px;
@@ -166,19 +167,13 @@
   color: white;
   mix-blend-mode: difference;
 }
-.dialog__text-button {
-  color: white;
-  mix-blend-mode: difference;
-}
-
-.footer__description {
-  color: white;
-  mix-blend-mode: difference;
-}
 
 .button:focus {
-  box-shadow: 2px 2px 0 0 var(--accent-color);
   outline: 0;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--accent-color);
 }
 
 .button::before {
@@ -196,19 +191,20 @@
 }
 
 @media (width<= 400px) {
-  .footer__button {
+  .section__button {
     flex-direction: column;
     padding: 14px 18px;
   }
-  .footer__image {
+  .section__image {
     inline-size: 28px;
   }
 }
 
-.footer__dialog {
+.section__dialog {
   position: fixed;
   inset: 0;
   padding: 30px;
+  max-inline-size: 341px;
 }
 
 .dialog__description {
@@ -226,47 +222,47 @@
   padding: 10px 17px;
   font-size: 14px;
   text-transform: uppercase;
-  inline-size: 293px;
+  inline-size: 100%;
 }
 .dialog__image {
-  inline-size: 39px;
+  inline-size: 31%;
   aspect-ratio: 1/1;
 }
 
-.footer__dialog[open]::backdrop {
+.section__dialog[open]::backdrop {
   backdrop-filter: brightness(25%);
 }
 
-.light {
-  filter: sepia(80%);
+.sepia {
+  filter: sepia(80%); /*исправленно*/
 }
 
-.winter {
-  filter: brightness(75%);
+.brightness {
+  filter: brightness(75%); /*исправленно*/
 }
 
-.summer {
-  filter: contrast(80%);
+.contrast {
+  filter: contrast(80%); /*исправленно*/
 }
 
-.galactic {
-  filter: saturate(150%);
+.saturate {
+  filter: saturate(150%); /*исправленно*/
 }
 
-.family {
-  filter: opacity(0.8);
+.opacity {
+  filter: opacity(0.8); /*исправленно*/
 }
 
-.up {
-  filter: contrast(120%) saturate(110%);
+.multifilter {
+  filter: contrast(120%) saturate(110%); /*исправленно*/
 }
 
-.man {
-  filter: invert(20%);
+.invert {
+  filter: invert(20%); /*исправленно*/
 }
 
-.hiking {
-  filter: grayscale(20%);
+.grayscale {
+  filter: grayscale(20%); /*исправленно*/
 }
 
 .is-liked .heart {

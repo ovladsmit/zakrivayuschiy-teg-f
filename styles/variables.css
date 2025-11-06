@@ -7,17 +7,17 @@
   --button-line-height: 90%;
   --dialog-line-height: 150%;
   --dialog-font-size: 14px;
-  --additional-font-family: PressStart2P-Regular, sans-serif;
+  --additional-font-family: PressStart2P-Regular, fantasy;
   --main-font-weight: 410;
   --title-font-weight: 715;
   --header-title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  --header__description-font-size: clamp(
+  --header-description-font-size: clamp(
     0.875rem,
     0.6769rem + 0.8451vw,
     1.4375rem
   );
-  --header__padding: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem);
-  --header__margin: 100px;
+  --header-padding: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem);
+  --header-margin: 100px;
   --bg-image: repeating-linear-gradient(
       to right,
       #d3d3d3 0px 2px,
@@ -33,5 +33,4 @@
   --adaptive-gap: 25px;
   --heart-counter-color: #000;
   --animation-fill-color: #ff0000;
-  --heart-sparks-color: var(--animation-fill-color);
 }
