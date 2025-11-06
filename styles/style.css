@@ -129,7 +129,7 @@
   }
 }
 .footer {
-  justify-items: center;
+  margin: 0 auto;
   margin-block-start: 50px;
   margin-block-end: 100px;
 }
