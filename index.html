@@ -381,22 +381,22 @@
   </main>
   <footer class="footer">
     <button type="button" class="footer__button button " onclick="window['dialog-menu'].showModal()"
-      aria-controls="dialog-id">
+      aria-controls="dialog-menu">
 
       <svg class="footer__image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
-        <use href="./svg/floppy_optimize.svg#floppy"></use>
+        <use href="./svg/floppy.svg#floppy"></use>
       </svg>
 
-      <p class="footer__description">Сохранить на память</p>
+      <span class="footer__description">Сохранить на память</span>
     </button>
     <dialog id="dialog-menu" class="footer__dialog">
       <div class="dialog__description">
         <svg class="dialog__image" xmlns="http://www.w3.org/2000/svg">
-          <use href="./svg/floppy_optimize.svg#floppy"></use>
+          <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <p class="dialog__text">Вставьте<br> дискету, чтобы<br> продолжить</p>
       </div>
-      <button class="dialog__button button" onclick="window['dialog-menu'].close()" aria-controls="dialog-id"><span
+      <button class="dialog__button button" onclick="window['dialog-menu'].close()" aria-controls="dialog-menu"><span
           class="dialog__text-button">ок</span></button>
     </dialog>
   </footer>
